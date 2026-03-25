@@ -1,0 +1,17 @@
+# 🎮 Sistema G9 Arena Gamer
+
+Este projeto faz parte da minha graduação em Engenharia da Computação e consiste em uma solução completa de banco de dados e lógica de acesso.
+
+## 🛠️ Tecnologias Utilizadas
+- **Modelagem:** brModelo (Diagrama Entidade-Relacionamento)
+- **Banco de Dados:** MySQL (DDL e DML)
+- **Lógica de Negócio:** Python 3 (VS Code)
+
+## 📋 Funcionalidades
+- Estruturação de tabelas para controle de clientes e status.
+- Scripts SQL para inserção e consulta de massa de dados.
+- Validação de acesso em Python com base no status do cliente (Ativo/Inativo).
+
+## 🚀 Como executar
+1. Execute o script `G9_script.sql` no seu servidor MySQL.
+2. Rode o script `acesso.py` para testar a validação de entrada.
