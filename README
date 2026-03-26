@@ -1,17 +1,28 @@
-# 🎮 Sistema G9 Arena Gamer
+# 🎮 Sistema G9 Arena Gamer - Gestão de Acessos & Cadastro
 
-Este projeto faz parte da minha graduação em Engenharia da Computação e consiste em uma solução completa de banco de dados e lógica de acesso.
+Este projeto evoluiu de uma simples modelagem de dados para um sistema **Full-Stack** (Python + MySQL) que gerencia o fluxo de entrada e o registro de novos clientes para uma Arena Gamer.
 
-## 🛠️ Tecnologias Utilizadas
-- **Modelagem:** brModelo (Diagrama Entidade-Relacionamento)
-- **Banco de Dados:** MySQL (DDL e DML)
-- **Lógica de Negócio:** Python 3 (VS Code)
+## 🚀 Novas Funcionalidades
+- **Menu Interativo:** Interface de linha de comando para escolha entre Acesso ou Cadastro.
+- **Módulo de Cadastro (Create):** Inserção de novos clientes diretamente pelo Python com persistência no MySQL.
+- **Validação de Acesso (Read):** Consulta dinâmica à `tbl_cliente` para verificar o status (Ativo/Inativo) em tempo real.
+- **Tratamento de Dados:** Uso de `.capitalize()` para padronização de nomes e prevenção de erros de digitação.
 
-## 📋 Funcionalidades
-- Estruturação de tabelas para controle de clientes e status.
-- Scripts SQL para inserção e consulta de massa de dados.
-- Validação de acesso em Python com base no status do cliente (Ativo/Inativo).
+## 🛠️ Tecnologias e Conceitos Aplicados
+- **Linguagem:** Python 3.x
+- **Banco de Dados:** MySQL 8.0
+- **Biblioteca de Conexão:** `mysql-connector-python`
+- **Segurança:** Utilização de *Parametrized Queries* (`%s`) para evitar SQL Injection no cadastro.
+- **Engenharia de Software:** Implementação de blocos `try/except/finally` para gestão de erros e fechamento seguro de conexões.
 
-## 🚀 Como executar
-1. Execute o script `G9_script.sql` no seu servidor MySQL.
-2. Rode o script `acesso.py` para testar a validação de entrada.
+## 📂 Estrutura do Banco de Dados
+O sistema utiliza a tabela `tbl_cliente`, contendo:
+- Dados Pessoais (Nome, CPF, Data de Nascimento)
+- Contato (Telefone, E-mail)
+- Controle (Data de Cadastro Automática via `CURDATE()`, Status de Acesso)
+
+## 💻 Como Executar o Projeto
+1. Certifique-se de ter o servidor MySQL rodando e a database `g9` criada.
+2. Instale o conector: 
+   ```bash
+   pip install mysql-connector-python
